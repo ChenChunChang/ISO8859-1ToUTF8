@@ -22,8 +22,12 @@ mimeType:"text/xml;charset=iso-8859-1",
 ```
 
 * If you are using XMLHTTP, call `overrideMimeType` method of XMLHttpRequest object.
-`xmlobj.overrideMimeType("text/xml;charset=iso-8859-1");`
+```
+xmlobj.overrideMimeType("text/xml;charset=iso-8859-1");
+```
 
 Second step, convert strings encoded with charset ISO-8859-1 to UTF-8. We need reference the ISO88591toUTF.js in your project.
-`var out = convertToUTF8(responseText);`
+```
+var out = convertToUTF8(responseText);
+```
 
