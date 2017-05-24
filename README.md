@@ -12,12 +12,14 @@ It works in Windows 7 with Chrome browser.
 First step, we need make HTTP POST method getting data with charset ISO-8859-1, because JS call WS with charse UTF-8 by default. We need overide MIME type of request.
 
 * If you are using Jquery SOAP plugin, please add property 'mimeType' in jquery.soap.js. 
-`return $.ajax({
+```
+return $.ajax({
 type:"POST",
 url:options.url,
 ......
 contentType:contentType+";charset=UTF-8",
-mimeType:"text/xml;charset=iso-8859-1",`
+mimeType:"text/xml;charset=iso-8859-1",
+```
 
 * If you are using XMLHTTP, call `overrideMimeType` method of XMLHttpRequest object.
 `xmlobj.overrideMimeType("text/xml;charset=iso-8859-1");`
